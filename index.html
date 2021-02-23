@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -34,6 +35,21 @@
                 </ul>
             </div>
         </nav>
+        <!-- Visitor count-->
+        <div>
+            <p>The number of visitors is : <span id="cntr">0</span></p>
+          </div>
+        
+          <script>
+            function counter_fn() {
+              var counter = document.getElementById("cntr");
+              var count = 0;
+              count = parseInt(counter.innerHTML);
+              count = count + 1;
+              counter.innerHTML = count;
+            }
+            window.onload = counter_fn;
+          </script>
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
